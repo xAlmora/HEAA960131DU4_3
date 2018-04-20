@@ -1,4 +1,7 @@
-# Resolucion
- Usando las clases de String resolvemos el problema la cadena de longitud maxima es StringInit.lenght()/2 porque sino ya no seria un substring que se repite más de una vez.
- Despues simplificamos la comparación quitandole a la cadena las substring que se repitan y deberia quedar vacia.
- 
+# Por que funciona
+Cuando duplicamos la cadena esta sigue con el patrón solo que con otro tamaño.
+Esto es [0,n-1] -> [0,2n-1]
+cuando hacemos ese mapeo nos interesa checar si
+[1,2n-1) que es lo mismo que [1,2n-2] contiene nuestra cadena inicial
+es decir, nuestra cadena inicial existe adentro sin los extremos de la cadena duplicada.
+Lo que nos dice que el patron se cumple porque los extremos estan en la repeticion y continuan en la suma de las dos string.
